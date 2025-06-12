@@ -1,0 +1,20 @@
+---
+title: "Fade In Text"
+description: "A smooth GSAP animation for fading text into view."
+status: "paid"
+version: "1.0.0"
+slug: "fade-in-text"
+---
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
+export default function FadeInText() {
+  const ref = useRef();
+  useEffect(() => {
+    gsap.fromTo(ref.current, { opacity: 0 }, { opacity: 1, duration: 1.2 });
+  }, []);
+  return <div ref={ref}>Hello, GSAP Animation!</div>;
+}
+
+<FadeInText />

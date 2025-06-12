@@ -1,0 +1,14 @@
+# Parallax Scroll Demo
+
+Here’s a simple GSAP parallax scroll effect.
+
+```javascript
+import { gsap } from "gsap";
+gsap.to(".parallax", {
+  y: 100,
+  scrollTrigger: { trigger: ".parallax", scrub: true },
+});
+```
+
+{" "}
+<div className="parallax">Parallax Element</div>
